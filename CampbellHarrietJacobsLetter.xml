@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<letter>
+    <heading>
+        <dateline>
+            <location city="Philadelphia" state="Pennsylvania">Phila.</location>
+            <date day="25 June 1842">25 June 1842</date>
+        </dateline>
+        <salutation>Esteemed Friend,</salutation>
+    </heading>
+    <mainText>... I hope you will call &amp; see, if <person status="enslaved">she</person> is now
+        in <placeref place="Philadelphia">the city</placeref>, one of the most interesting cases of
+        escape from slavery that you have ever seen. She was sent from <placeref city="Philadelphia"
+            state="Pennsylvania">this city</placeref>
+        <date day="24 June 1842">yesterday morning</date> &amp; consigned to <person
+            status="nonslave">Mr. Johnston</person>. She is from <placeref state="North Carolina"
+            >N.C.</placeref> was brought away by <person status="nonslave">a sea captain</person>.
+        She was sold by <person status="nonslave">her master</person> to the <person
+            status="nonslave">speculators</person> &amp; to avoid being sent away she was hidden for
+        7 years! in a small upper room of a house occupied by <person status="nonslave">colored
+            people</person> &amp; within a hundred yards of <person status="nonslave">her
+            master</person>'s house, who did not know she was there. She had not seen <person
+            status="enslaved">her boy</person>, for 7 years till within 3 days of her coming away.
+        She has been shut up so long that she can hardly walk. <person status="enslaved">Another
+            woman</person> was brought away from <placeref state="Delaware">Delaware</placeref>, who
+        was found tied to a tree. If <person status="nonslave">Mr. Johnston</person> was the man he
+        ought to be, he would invite you occasionally to see some of these remarkable cases, which
+        are continually passing from <placeref city="Philadelphia" state="Pennsylvania"
+            >Phil.</placeref> to <placeref state="New York State" city="New York City"
+            >N.Y.</placeref> The Vagrant what a queer mistake. The Vigilance Committee of this city
+        are doing a fine business in weakening &amp; delapidating the edifice of slavery. Success to
+        them...</mainText>
+    <signature>
+        <person status="nonslave" type="writer">Joshua Coffin</person>
+    </signature>
+    <sourceCitation> Autograph letter, signed; Anti-Slavery Collection, Boston Public Library; Lydia
+        Maria Child Papers, The Collected Correspondence of Lydia Maria Child, 1817-1880, ed.
+        Patricia G. Holland and Milton Meltzer. Millwood, N.Y.: Kraus Microfilm, 1980.
+        14:389—</sourceCitation>
+    <!--This is intended to be searchable by name, place, date, and enslaved vs. nonslave personal status, as well as by separating the letter into its parts of heading, body, conclusion etc. If it were part of a database including a broader variety of texts, instead of just antislavery correspondence, additional elements and attributes would have been added to the metadata/source citation. -->
+</letter>
