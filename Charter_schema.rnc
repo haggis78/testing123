@@ -1,11 +1,12 @@
 datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
 start = charter
-charter = element charter {titulus*, salutatio, narratio, datingClause?, subscriptio?, sigillum*, marginalia*, endorsement*, metadata}
+charter = element charter {titulus*, salutatio, narratio, datingClause?, subscriptio?, sigillum*, marginalia*, endorsement*, source+ }
 titulus = element titulus {mixed {(person | grant | placename | purpose | date)*}}
 salutatio = element salutatio {mixed {person}}
 narratio = element narratio {mixed {(person | grant | placename | purpose | date)*}}
 grant = attribute grant {mixed {placename}}
-datingClause = element datingClause {mixed {(date | text)+}
+purpose = attribute purpose {text}
+datingClause = element datingClause {mixed {(date | text)+}}
 date = element date {(when | (from, to)), text} 
 when = attribute when {xsd:date | xsd:gYearMonth | xsd:gYear} 
 from = attribute from {xsd:date | xsd:gYearMonth | xsd:gYear} 
@@ -15,15 +16,26 @@ sigillum = element sigillum {person*}
 marginalia = element marginalia {mixed {(person | grant | placename | purpose | date)*}}
 endorsement = element endorsement {mixed {(person | grant | placename | purpose | date)*}}
 placename = attribute placename {text}
-person = element person {name*, role*, status*, title*, sex)
+person = element person {name*, role*, status*, address*, sex?}
 name = attribute name {text}
 role = attribute role {text}
 status = attribute status {text}
-title = attribute title {text}
+address = attribute address {text}
+<!-- I had to use address to indicate a person's title e.g. sir because the term title is used below in the sense of the title of a book. -->
 sex = attribute sex {"m" | "f"}
 
-metadata = element metadata {format*, bibEntry*, MSRef*, date*}
+source = element source {format*, bibEntry*, MSRef*, date*}
+MSRef = attribute MSRef {text}
 format = attribute format {"original" | "inspeximus" | "cartulary" | "antiqTransc" | "other"}
 bibEntry = element bibEntry {mixed {(author | editor)+, title+, series?, publisher, publicationPlace, date, page*}}
+author = attribute author {person}
+editor = attribute editor {person}
+title = attribute title {text}
+series = attribute series {text}
+publisher = attribute publisher {text}
+publicationPlace = attribute publicationPlace {text}
+page = attribute page {text}
+publisher = attribute publisher {text}
 
-<!-- These are the standard parts of a medieval charter, a document recording some kind of grant, such as a sale or gift of land. Because charters changed over time, not every charter has all of these parts. For example, earlier charters do not have a dating clause. -->
+
+<!-- These are standard parts of a medieval charter, a document recording some kind of grant, such as a sale or gift of land. Because charters changed over time, not every charter has all of these parts. For example, earlier charters do not have a dating clause. -->

@@ -2,8 +2,8 @@
 <charter>
     <titulus>Carta pertinens ad prebendam de Suthmuscam</titulus>
     <salutatio>Omnibus sancte matris ecclesie filiis ad quos presens scriptum pervenerit <person
-        role="grantor" name="Hugh fitzRalph" status="lay" sex="m">Hugo filius Radulphi</person>
-            salutem.</salutatio>
+            role="grantor" name="Hugh fitzRalph" status="lay" sex="m">Hugo filius Radulphi</person>
+        salutem.</salutatio>
     <narratio>Noverit universitas vestra me dedisse et concessisse et hac presenti carta mea
         confirmasse <person role="grantee" name="God" status="deity">Deo</person> et <church
             type="collegiate or minster"><person role="grantee" name="Virgin Mary" status="saint"
@@ -14,26 +14,29 @@
             sex="m">magistri Willelmi de Marcam</person> de <place placename="South Muskham"
             >Suthmusham</place> pro salute anime mee et <person name="Agnes fitzRalph" sex="f"
             >Agnetis uxoris mee</person> et antecessorum et successorum meorum in puram et perpetuam
-        elemosinam <endowment type="plough land">unam selionem de cultura</endowment> mea iacentem proximam
-        culture <person role="beneficiary" status="cleric" title="magister"
-            name="William of Markham" sex="m">predicti Willelmi</person> versus aquilonem
-        scilicet ad crementum curie sue. <person role="grantor" name="Hugh fitzRalph" status="lay"
-            sex="m">Ego</person> vero et heredes me predictam <endowment type="plough land"
-            >selionem</endowment> predicte <benefice type="prebend">prebende</benefice> in perpetuum
+        elemosinam <grant type="plough land">unam selionem de cultura</grant> mea iacentem
+        proximam culture <person role="beneficiary" status="cleric" title="magister"
+            name="William of Markham" sex="m">predicti Willelmi</person> versus aquilonem scilicet
+        ad crementum curie sue. <person role="grantor" name="Hugh fitzRalph" status="lay" sex="m"
+            >Ego</person> vero et heredes me predictam <grant type="plough land"
+            >selionem</grant> predicte <benefice type="prebend">prebende</benefice> in perpetuum
         warantizabimus et huic scripto sigillum meum in testimonium apposui.</narratio>
     <subscriptio>Hiis testibus <person role="witness" status="cleric" title="magister"
             name="William de Taney" sex="m">magistro Willelmo de Tanay</person>, <person
-            role="witness" status="cleric" title="magister" name="Henry of Nottingham"
-            sex="m">magistro Henrico de Notingham</person>, <person role="witness" status="lay"
+            role="witness" status="cleric" title="magister" name="Henry of Nottingham" sex="m"
+            >magistro Henrico de Notingham</person>, <person role="witness" status="lay"
             title="lord" name="William de Cressy" sex="m">domino Willelmo de Gressi</person>,
             <person role="witness" status="lay" title="lord" name="Ralph of Trehampton" sex="m"
             >domino Radulpho de Trehamton'</person>,<person role="witness" status="lay" title="lord"
             name="Henry of Steeping" sex="m">domino Henrico de Steping'</person> et aliis. </subscriptio>
-    <metadata>
-        <date>1228 x 1241</date>
-        <!--whc: How to indicate a date range rather than a precise date? This is the standard format for typing it when dealing with medieval documents, but how best to express it in XML?-->
-        <source>
-            <person role="editor">Michael Jones</person> et alii, The White Book (Liber Albus) of
-            Southwell, volume 1 (2018), document 37</source>
-    </metadata>
+    <source>
+        <format>cartulary</format>
+        <bibEntry>
+            <editor>Michael Jones</editor> et alii, <title>The White Book (Liber Albus) of
+                Southwell, volume 1</title>
+            <date>2018</date>, <page>50-51</page>
+        </bibEntry>
+        <date> from 1228 to 1241</date>
+
+    </source>
 </charter>
