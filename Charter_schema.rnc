@@ -1,41 +1,45 @@
 datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
 start = charter
-charter = element charter {titulus*, salutatio, narratio, datingClause?, subscriptio?, sigillum*, marginalia*, endorsement*, source+ }
-titulus = element titulus {mixed {(person | grant | placename | purpose | date)*}}
+charter = element charter {titulus*, salutatio, narratio, datingClause?, subscriptio?, sigillum*, marginalia*, endorsement*, source+, date+ }
+titulus = element titulus {mixed {(person | grant | loc | org | purpose | date)*}}
 salutatio = element salutatio {mixed {person}}
-narratio = element narratio {mixed {(person | grant | placename | purpose | date)*}}
-grant = attribute grant {mixed {placename}}
-purpose = attribute purpose {text}
-datingClause = element datingClause {mixed {(date | text)+}}
+narratio = element narratio {mixed {(person | grant | loc | org | purpose | date)*}}
+grant = element grant {mixed {loc*}}
+org = element org {mixed {(orgType | person | loc)*}}
+orgType = attribute orgType {("royal" | "parl" | "papal" | "episc" | "monastic" | "univ" | "univColl" | "minster" | "cathedral" | "paroch" | "hosp" | "benefice")}
+purpose = element purpose {text}
+datingClause = element datingClause {mixed {loc?, date?}}
 date = element date {(when | (from, to)), text} 
 when = attribute when {xsd:date | xsd:gYearMonth | xsd:gYear} 
 from = attribute from {xsd:date | xsd:gYearMonth | xsd:gYear} 
 to = attribute to {xsd:date | xsd:gYearMonth | xsd:gYear}
-subscriptio = element subscriptio {person*}
-sigillum = element sigillum {person*}
-marginalia = element marginalia {mixed {(person | grant | placename | purpose | date)*}}
-endorsement = element endorsement {mixed {(person | grant | placename | purpose | date)*}}
-placename = attribute placename {text}
-person = element person {name*, role*, status*, address*, sex?}
+subscriptio = element subscriptio {mixed {person*}}
+sigillum = element sigillum {(person | org)*}
+marginalia = element marginalia {mixed {(person | grant | loc | org| purpose | date)*}}
+endorsement = element endorsement {mixed {(person | grant | loc | org | purpose | date)*}}
+loc = element loc {locName, text}
+locName = attribute locName {text}
+person = element person {name*, role*, status*, address*, sex?, text}
 name = attribute name {text}
 role = attribute role {text}
 status = attribute status {text}
 address = attribute address {text}
-<!-- I had to use address to indicate a person's title e.g. sir because the term title is used below in the sense of the title of a book. -->
+# I had to use address to indicate a person's title e.g. sir because the term title is used below in the sense of the title of a book.
 sex = attribute sex {"m" | "f"}
 
-source = element source {format*, bibEntry*, MSRef*, date*}
+source = element source {format*, bibEntry*, MSRef*, type, date*}
 MSRef = attribute MSRef {text}
+type = attribute type {"royal" | "episc" | "papal" | "baronial" | "other" }
 format = attribute format {"original" | "inspeximus" | "cartulary" | "antiqTransc" | "other"}
-bibEntry = element bibEntry {mixed {(author | editor)+, title+, series?, publisher, publicationPlace, date, page*}}
-author = attribute author {person}
-editor = attribute editor {person}
-title = attribute title {text}
-series = attribute series {text}
-publisher = attribute publisher {text}
-publicationPlace = attribute publicationPlace {text}
-page = attribute page {text}
-publisher = attribute publisher {text}
+bibEntry = element bibEntry {mixed {(author | editor)*, title+, series?, publisher, pubPlace, date, page*}}
+author = element author {text}
+editor = element editor {text}
+title = element title {text}
+series = element series {text}
+publisher = element publisher {text}
+pubPlace = element pubPlace {text}
+page = element page {text}
 
 
-<!-- These are standard parts of a medieval charter, a document recording some kind of grant, such as a sale or gift of land. Because charters changed over time, not every charter has all of these parts. For example, earlier charters do not have a dating clause. -->
+
+#These are standard parts of a medieval charter, a document recording some kind of grant, such as a sale or gift of land. Because charters changed over time, not every charter has all of these parts. For example, earlier charters do not have a dating clause.

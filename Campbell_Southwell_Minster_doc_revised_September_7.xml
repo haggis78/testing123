@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="Charter_schema.rnc" type="application/relax-ng-compact-syntax"?>
 <charter>
     <titulus>Carta pertinens ad prebendam de Suthmuscam</titulus>
     <salutatio>Omnibus sancte matris ecclesie filiis ad quos presens scriptum pervenerit <person
-            role="grantor" name="Hugh fitzRalph" status="lay" sex="m">Hugo filius Radulphi</person>
+            name="Hugh fitzRalph" role="grantor" status="lay" sex="m">Hugo filius Radulphi</person>
         salutem.</salutatio>
     <narratio>Noverit universitas vestra me dedisse et concessisse et hac presenti carta mea
-        confirmasse <person role="grantee" name="God" status="deity">Deo</person> et <church
-            type="collegiate or minster"><person role="grantee" name="Virgin Mary" status="saint"
-                sex="f">beate Marie</person> de <place placename="Southwell"
-            >Suthwella</place></church> et <benefice type="prebend" prebend="South Muskham"
-            >prebende</benefice>
-        <person role="beneficiary" status="cleric" title="magister" name="William of Markham"
-            sex="m">magistri Willelmi de Marcam</person> de <place placename="South Muskham"
-            >Suthmusham</place> pro salute anime mee et <person name="Agnes fitzRalph" sex="f"
-            >Agnetis uxoris mee</person> et antecessorum et successorum meorum in puram et perpetuam
-        elemosinam <grant type="plough land">unam selionem de cultura</grant> mea iacentem
-        proximam culture <person role="beneficiary" status="cleric" title="magister"
-            name="William of Markham" sex="m">predicti Willelmi</person> versus aquilonem scilicet
-        ad crementum curie sue. <person role="grantor" name="Hugh fitzRalph" status="lay" sex="m"
-            >Ego</person> vero et heredes me predictam <grant type="plough land"
-            >selionem</grant> predicte <benefice type="prebend">prebende</benefice> in perpetuum
-        warantizabimus et huic scripto sigillum meum in testimonium apposui.</narratio>
-    <subscriptio>Hiis testibus <person role="witness" status="cleric" title="magister"
-            name="William de Taney" sex="m">magistro Willelmo de Tanay</person>, <person
-            role="witness" status="cleric" title="magister" name="Henry of Nottingham" sex="m"
-            >magistro Henrico de Notingham</person>, <person role="witness" status="lay"
-            title="lord" name="William de Cressy" sex="m">domino Willelmo de Gressi</person>,
-            <person role="witness" status="lay" title="lord" name="Ralph of Trehampton" sex="m"
-            >domino Radulpho de Trehamton'</person>,<person role="witness" status="lay" title="lord"
-            name="Henry of Steeping" sex="m">domino Henrico de Steping'</person> et aliis. </subscriptio>
-    <source>
-        <format>cartulary</format>
+        confirmasse <person name="God" role="grantee" status="deity">Deo</person> et <person
+            name="Virgin_Mary" role="grantee" status="saint" address="blessed" sex="f"> beate Marie
+        </person> de <loc locName="Southwell">Suthwella</loc> et <org orgType="minster"
+            >prebende</org>
+        <person name="William_of_Markham" role="beneficiary" status="cleric" address="magister"
+            sex="m">magistri Willelmi de Marcam</person> de <loc locName="South_Muskham"
+            >Suthmusham</loc> pro salute anime mee et <person name="Agnes_fitzRalph" sex="f">Agnetis
+            uxoris mee</person> et antecessorum et successorum meorum <purpose>in puram et perpetuam
+            elemosinam </purpose>
+        <grant>unam selionem de cultura mea </grant> iacentem proximam culture <person
+            name="William_of_Markham" role="beneficiary" status="cleric" address="magister" sex="m"
+            >predicti Willelmi</person> versus aquilonem scilicet ad crementum curie sue. <person
+            name="Hugh_fitzRalph" role="grantor" status="lay" sex="m">Ego</person> vero et heredes
+        me <grant>predictam selionem</grant>
+        <org orgType="minster">predicte prebende</org> in perpetuum warantizabimus et huic scripto
+        sigillum meum in testimonium apposui.</narratio>
+    <subscriptio>Hiis testibus <person name="William_de_Taney" role="witness" status="cleric"
+            address="magister" sex="m">magistro Willelmo de Tanay</person>, <person
+            name="Henry_of_Nottingham" role="witness" status="cleric" address="magister" sex="m"
+            >magistro Henrico de Notingham</person>, <person name="William_de_Cressy" role="witness"
+            status="lay" address="lord" sex="m">domino Willelmo de Gressi</person>, <person
+            name="Ralph_of_Trehampton" role="witness" status="lay" address="lord" sex="m">domino
+            Radulpho de Trehamton'</person>,<person name="Henry_of_Steeping" role="witness"
+            status="lay" address="lord" sex="m">domino Henrico de Steping'</person> et aliis. </subscriptio>
+    <source type="other" format="cartulary">
         <bibEntry>
             <editor>Michael Jones</editor> et alii, <title>The White Book (Liber Albus) of
-                Southwell, volume 1</title>
-            <date>2018</date>, <page>50-51</page>
+                Southwell, volume 1</title>, <series>Pipe Roll Society</series>, <publisher>Boydell</publisher>,
+            <pubPlace>Woodbridge, Suffolk</pubPlace>, 
+            <date when="2018">2018</date>, <page>50-51</page>
         </bibEntry>
-        <date> from 1228 to 1241</date>
-
     </source>
+    <date from="1228" to="1241"/>
 </charter>
