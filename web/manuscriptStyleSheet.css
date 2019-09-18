@@ -60,7 +60,8 @@ cite.sub cite.sub::after {content: 'â€™'}
 
 
 img
-{padding:5px;}
+{padding:5px;
+width:100%}
 
 p {display:block; padding:2px 2px 2px 2px; line-height:1.2em}
 
